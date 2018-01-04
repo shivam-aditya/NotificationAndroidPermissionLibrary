@@ -1,6 +1,8 @@
 
 # react-native-notification-android-permission-library
 
+This project is made to get status of notification permission for android in react native. 
+
 ## Getting started
 
 `$ npm install react-native-notification-android-permission-library --save`
@@ -50,4 +52,6 @@ import RNNotificationAndroidPermissionLibrary from 'react-native-notification-an
 // TODO: What to do with the module?
 RNNotificationAndroidPermissionLibrary;
 ```
-  
+## License
+
+MIT
