@@ -3,6 +3,8 @@
 
 This project is made to get status of notification permission for android in react native. 
 
+NOTE: This is only meant for Android. Please do not use it for iOS in it's current state.
+
 ## Getting started
 
 `$ npm install react-native-notification-android-permission-library --save`
@@ -49,9 +51,15 @@ This project is made to get status of notification permission for android in rea
 ```javascript
 import RNNotificationAndroidPermissionLibrary from 'react-native-notification-android-permission-library';
 
-// TODO: What to do with the module?
-RNNotificationAndroidPermissionLibrary;
+async checkAndroidNotificationPermission () {
+    let status = await RNNotificationAndroidPermissionLibrary.checkNotificationPermission();
+    console.log("Android Push Notification status is: " + status);
+}
 ```
+## API
+
+- checkNotificationPermission() - Returns bool (true/false) depending on status of push notification permission for android OS.
+
 ## License
 
 MIT
