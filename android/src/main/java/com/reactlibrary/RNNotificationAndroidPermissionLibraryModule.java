@@ -1,9 +1,10 @@
 
 package com.reactlibrary;
 
-import android.app.AppOpsManager;
+//import android.app.AppOpsManager;
+//import android.content.pm.ApplicationInfo;
+
 import android.content.Context;
-import android.content.pm.ApplicationInfo;
 import android.support.v4.app.NotificationManagerCompat;
 
 import com.facebook.react.bridge.Promise;
@@ -11,9 +12,9 @@ import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 
-import java.lang.reflect.Field;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
+//import java.lang.reflect.Field;
+//import java.lang.reflect.InvocationTargetException;
+//import java.lang.reflect.Method;
 
 public class RNNotificationAndroidPermissionLibraryModule extends ReactContextBaseJavaModule {
 
@@ -38,6 +39,7 @@ public class RNNotificationAndroidPermissionLibraryModule extends ReactContextBa
 
       promise.resolve(areNotificationsEnabled);
 
+//      OLD METHOD
 //      String CHECK_OP_NO_THROW = "checkOpNoThrow";
 //      String OP_POST_NOTIFICATION = "OP_POST_NOTIFICATION";
 //
