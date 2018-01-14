@@ -38,15 +38,6 @@ NOTE: This is only meant for Android. Please do not use it for iOS in it's curre
       compile project(':react-native-notification-android-permission-library')
   	```
 
-#### Windows
-[Read it! :D](https://github.com/ReactWindows/react-native)
-
-1. In Visual Studio add the `RNNotificationAndroidPermissionLibrary.sln` in `node_modules/react-native-notification-android-permission-library/windows/RNNotificationAndroidPermissionLibrary.sln` folder to their solution, reference from their app.
-2. Open up your `MainPage.cs` app
-  - Add `using Notification.Android.Permission.Library.RNNotificationAndroidPermissionLibrary;` to the usings at the top of the file
-  - Add `new RNNotificationAndroidPermissionLibraryPackage()` to the `List<IReactPackage>` returned by the `Packages` method
-
-
 ## Usage
 ```javascript
 import RNNotificationAndroidPermissionLibrary from 'react-native-notification-android-permission-library';
