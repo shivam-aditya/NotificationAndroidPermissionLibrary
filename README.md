@@ -51,7 +51,7 @@ async checkAndroidNotificationPermission () {
 
 - checkNotificationPermission() - Returns bool (true/false) depending on status of push notification permission for android OS.
 
-- requestAutostartPermissionForXiaomi() - Opens Autostart setting page in xiaomi phones. Can be used to prompt users to enable autostart for your app. Notifications and background tasks work better when autostart is enabled for your application.
+- requestAutostartPermissionForXiaomi() - Opens Autostart setting page in xiaomi phones. Can be used to prompt users to enable autostart for your app. Background tasks work better when autostart is enabled for your application.
 
 ## License
 
