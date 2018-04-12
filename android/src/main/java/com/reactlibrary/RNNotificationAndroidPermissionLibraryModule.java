@@ -40,22 +40,32 @@ public class RNNotificationAndroidPermissionLibraryModule extends ReactContextBa
 
     @ReactMethod
     public void requestAutostartPermissionForXiaomi() {
-        String manufacturer = "xiaomi";
-        if (manufacturer.equalsIgnoreCase(android.os.Build.MANUFACTURER)) {
-            //this will open auto start screen where user can enable permission for your app
-            Intent intent = new Intent();
-            intent.setComponent(new ComponentName("com.miui.securitycenter", "com.miui.permcenter.autostart.AutoStartManagementActivity"));
-            getCurrentActivity().startActivity(intent);
+        try{
+            String manufacturer = "xiaomi";
+            if (manufacturer.equalsIgnoreCase(android.os.Build.MANUFACTURER)) {
+                //this will open auto start screen where user can enable permission for your app
+                Intent intent = new Intent();
+                intent.setComponent(new ComponentName("com.miui.securitycenter", "com.miui.permcenter.autostart.AutoStartManagementActivity"));
+                getCurrentActivity().startActivity(intent);
+            }
+        }
+        catch(Exception ex){
+            ex.printStackTrace();
         }
     }
 
     @ReactMethod
     public void requestAutostartPermissionForChineseDevices(String manufacturer, String security_app_packagename, String security_app_activityname) {
-        if (manufacturer.equalsIgnoreCase(android.os.Build.MANUFACTURER)) {
-            //this will open auto start screen where user can enable permission for your app
-            Intent intent = new Intent();
-            intent.setComponent(new ComponentName(security_app_packagename, security_app_activityname));
-            getCurrentActivity().startActivity(intent);
+        try{
+            if (manufacturer.equalsIgnoreCase(android.os.Build.MANUFACTURER)) {
+                //this will open auto start screen where user can enable permission for your app
+                Intent intent = new Intent();
+                intent.setComponent(new ComponentName(security_app_packagename, security_app_activityname));
+                getCurrentActivity().startActivity(intent);
+            }
+        }
+        catch(Exception ex){
+            ex.printStackTrace();
         }
     }
 
